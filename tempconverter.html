@@ -1,0 +1,117 @@
+<html>
+    <head>
+        <style>
+      body{
+        background-color:pink;
+      }
+       .back{
+        width:40%;
+        height:350px;
+        float:left; 
+        background-color:aquamarine;
+        margin-left:30%;
+        margin-top:30px;
+        border-radius:15px;
+        box-shadow:4px 4px 8px rgb(198, 13, 102);
+      
+       }
+       h2{
+        color:rgb(103, 8, 63);
+        font-size:50px;
+        text-align:center;
+        margin-top:50px;
+       }
+       .a{
+        color:rgb(13, 10, 91);
+        text-align:center;
+        margin-top:60px;
+        font-size:25px;
+       }
+       .d{
+        width:55%;
+        height:40px;
+        margin-left:20%;
+        margin-top:25px;
+        font-size:20px;
+       }
+       .o{
+        width:55%;
+        height:40px;
+        margin-left:20%;
+        margin-top:25px;
+        font-size:20px;
+       }
+       .q{
+        height:40px;
+        font-size:15px;
+        background:transparent;
+        border:2px solid rgb(206, 141, 22);
+
+       }
+       .w{
+             width:30%;
+             height:40px;
+             margin-top:20px;
+             margin-left:17%;
+             background-color:black;
+             
+             font-size:20px;
+             color:white;
+             border:2px sold black;
+       }
+       .p{
+            width:30%;
+             height:40px;
+             margin-top:20px;
+             
+             background-color:rgb(223, 141, 54);
+             
+             font-size:20px;
+             color:black;
+             border:2px solid  rgb(223, 141, 54);;
+       }
+        </style>
+        </head>
+        <body>
+           
+                <h2>Temperature Converter</h2>
+           
+            <div class="back">
+                <h3 class="a">Enter the temperature to convert</h2>
+            <input type="text"  placeholder="fahrenheit" id="fahrenheit"  name="k" class="d"><br>
+            <input type="text"  placeholder="Celcius" id="celcius" name="l" class="o">
+            <input type="button" value="convert" id="x" onclick="caltemp()" class="w">
+            <input type="button" value="reset" id="y" onclick="clearform()" class="p">
+   
+            </div>
+
+            <script>
+                document.getElementById('x').onclick=caltemp;
+                document.getElementById('y').onclick=clearform;
+
+                function caltemp(){
+
+                    
+                    var fahrenheit=document.getElementById("fahrenheit").value;
+                    var celcius=document.getElementById("celcius").value;
+
+                    if(fahrenheit !=' '){
+                        celcius=(parseFloat(fahrenheit)-32)/1.8;
+                    }
+                    else{
+                     fahrenheit = (parseFloat(celcius)* 1.8)+32;
+                    
+                    }
+                    document.getElementById('fahrenheit').value=parseFloat(fahrenheit).toFixed(1);
+                    document.getElementById('celcius').value=parseFloat(celcius).toFixed(1);
+                }
+                function  clearform(){
+                     
+                     document.getElementById('fahrenheit').value=' ';
+                     document.getElementById('celcius').value=' ';
+                }
+                
+            </script>
+        </body>
+       
+    </html>
